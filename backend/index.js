@@ -12,7 +12,7 @@ app.use(express.json());
 
 // 🗄️ MongoDB Connection (Local Database)
 // Agar aap cloud use kar rahe ho toh apna URL daalna, nahi toh local ke liye ye perfect hai
-mongoose.connect('mongodb+srv://ashishkriitm27_db_user:Abhi99736@cluster0.axgxz7y.mongodb.net/?appName=Cluster0')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Database Se Connection Ho Gaya! 🗄️"))
   .catch((err) => console.log("Database connect nahi hua ❌", err));
 
