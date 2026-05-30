@@ -15,7 +15,7 @@ function App() {
 
     try {
       // 🚀 Axios ke zariye backend API par data bhejna
-      const response = await axios.post('http://localhost:5000/api/google-login', decoded);
+      const response = await axios.post('https://my-mern-backend-sx7h.onrender.com/api/google-login', decoded);
       
       if (response.status === 200) {
         // Backend se response aane par user state set karna
